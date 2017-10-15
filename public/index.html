@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>G-Market</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <body ng-app="gMarket">
+
+<!--using dummy menu dummy dummy -->
+<div class="menu">
+     <ul>
+         <li><a ui-sref="home">Home</a></li>
+         <li><a ui-sref="shop"> SHOP ALL HERE </a></li>
+          <li>by type</li>
+         <li>
+             <ul>
+               <!-- Where you pass in params/id for product type -->
+                 <li><a ui-sref="shopbytype({type: 'men'})">Men</a></li>
+                 <li><a ui-sref="shopbytype({type: 'women'})">Women</a></li>
+             </ul>
+         </li>
+         <li><a ui-sref="cart"> Shopping Cart </a></li>
+         <li><a ui-sref="checkout"> Checkout screen  </a></li>
+         <li><a ui-sref="test"> test  </a></li>
+     </ul>
+ </div>
+
+ <div class="view-container">
+  <ui-view></ui-view>
+ </div>
+
+<!--angular here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<!--script files -->
+  <script src="./js/app.js"></script>
+<!--services -->
+  <script src="./js/services/shopService.js"></script>
+  <script src="./js/services/service.js"></script>
+<!--controllers -->
+  <script src="./js/controllers/homeCtrl.js"></script>
+  <script src="./js/controllers/checkoutCtrl.js"></script>
+  <script src="./js/controllers/cartCtrl.js"></script>
+  <script src="./js/controllers/shopCtrl.js"></script>
+  <script src="./js/controllers/shopbytypeCtrl.js"></script>
+  <script src="./js/ctrl.js"></script>
+
+
+  </body>
+</html>
